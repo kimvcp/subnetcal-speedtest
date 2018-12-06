@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>The Best Subnet Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	  crossorigin="anonymous"> 
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+
+<body>
+	<div class="row center">
+		<div class="col s12 m12 l12">
+			<div class="card">
+				<div class="card-content">
+					<span class="card-title">IP Subnet Calculator</span>
+					<div class="divider"></div><br />
+					<input ng-model="oct0" type="number" min="0" max="255" style="width:50px" />.
+					<input ng-model="oct1" type="number" min="0" max="255" style="width:50px" />.
+					<input ng-model="oct2" type="number" min="0" max="255" style="width:50px" />.
+					<input ng-model="oct3" type="number" min="0" max="255" style="width:50px" />/
+					<input ng-model="prefix" type="number" min="0" max="32" style="width:50px" />
+
+					<br />
+					Class:<br />
+					Network Address:<br />
+					Subnet Mask: <br />
+					IP Binary:<br />
+					Network Binary: <br />
+					Subnet Binary: <br />
+					Network Bits:<br />
+					Host Bits:<br />
+					Subnet Bits: <br />
+					Total Subnets:<br />
+					Hosts Per Subnet: <br />
+					Total Hosts on Network: <br />
+					Hosts lost to Subnets:
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
