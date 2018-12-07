@@ -9,46 +9,51 @@
 </head>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	  crossorigin="anonymous"> 
+      crossorigin="anonymous"> 
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     
-<body>
+<body style="font-family: 'Ubuntu', sans-serif;"> 
     <div style="text-align: center; padding-top: 20px; padding-bottom: 20px; background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);">
-        <h1>Subnet Calculator</h1>
+        <h1><strong>Subnet Calculator</strong> </h1>
     </div>
     <div class="card">
             <div class="card-content" style="padding-left: 20px; padding-right: 20px;">
+                
                 <div align="center">
-                <div class="divider"></div><br />
-                <input id="q1" class="addr" ng-model="oct0" type="number" min="0" max="255" style="width:60px; height: 30px;" />.
-                <input id="q2" class="addr" ng-model="oct1" type="number" min="0" max="255" style="width:60px; height: 30px;" />.
-                <input id="q3" class="addr" ng-model="oct2" type="number" min="0" max="255" style="width:60px; height: 30px;" />.
-                <input id="q4" class="addr" ng-model="oct3" type="number" min="0" max="255" style="width:60px; height: 30px;" />.
-                <input id="cidr" class="addr" ng-model="prefix" type="number" min="0" max="32" style="width:60px; height: 30px;" />
-                <button onclick='calculate();'>Calculate</button>
-                </div>
-                <div style="padding-left:50px; padding-right: 50px;">
+                    <div class="divider"><br/><h2>
+                        <input id="q1" class="addr" ng-model="oct0" type="number" min="0" max="255" style="width:80px; height: 50px;" />.
+                        <input id="q2" class="addr" ng-model="oct1" type="number" min="0" max="255" style="width:80px; height: 50px;" />.
+                        <input id="q3" class="addr" ng-model="oct2" type="number" min="0" max="255" style="width:80px; height: 50px;" />.
+                        <input id="q4" class="addr" ng-model="oct3" type="number" min="0" max="255" style="width:80px; height: 50px;" />/
+                        <input id="cidr" class="addr" ng-model="prefix" type="number" min="0" max="32" style="width:80px; height: 50px;" />
+                        <button style=" margin-left: 60px; margin-bottom: 9px;" class="btn btn-info btn-lg" onclick='calculate();'>Calculate</button>
+                    </div>
+                </div></h2>
+                
+                <div style="padding-left:50px; padding-right: 50px;"><h3>
                         <hr>
+                        <div class='result'>
+                        <span class=label>Standard Class :</span>
+                        <span class=value id=resClass></span>
+                        </div><br>
                         <div class='result'>
                         <span class=label>IP Address :</span>
                         <span class=value id=resIP></span>
-                        </div>
-                        <div class='result'>
-                        <span class=label>Subnet mask :</span>
-                        <span class=value id=resMask></span>
                         </div>
                         <div class='result'>
                         <span class=label>Net Address :</span>
                         <span class=value id=resNet></span>
                         </div>
                         <div class='result'>
-                        <span class=label>Broadcast Address :</span>
-                        <span class=value id=resBC></span>
+                        <span class=label>Subnet mask :</span>
+                        <span class=value id=resMask></span>
                         </div>
                         <div class='result'>
-                        <span class=label>Standard Class :</span>
-                        <span class=value id=resClass></span>
-                        </div>
+                        <span class=label>Broadcast Address :</span>
+                        <span class=value id=resBC></span>
+                        </div><br>
                         <div class='result'>
                         <span class=label>Range :</span>
                         <span class=value id=resRange></span>
@@ -70,11 +75,11 @@
                         <span class=value id=resBinBC></span>
                         </div>
                     </div>
-            </div>
+            </div></h3>
         </div>
-        <div style="padding-top:5px;">
+        <!-- <div style="padding-top:5px;">
             <img src=" https://www.blockchains-expert.com/wp-content/uploads/2017/10/Untitled-design-3-4.jpg" style="width:100%; height:392px;" alt="">
-        </div>
+        </div> -->
 </body>
 
 <script type="text/javascript">
